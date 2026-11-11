@@ -1,0 +1,46 @@
+{
+  "name": "@f1forza/dsh-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "F1 Forza Ferrari theme for DeepSeek Harness: Rosso Corsa and carbon, the Scuderia shield and wordmark, a race-number ghost, and a finish line along the floor.",
+  "type": "module",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md"
+  ],
+  "license": "MIT",
+  "author": "Sean Montecillo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delmontecillo/dsh-ferrari-theme.git"
+  },
+  "homepage": "https://github.com/delmontecillo/dsh-ferrari-theme#readme",
+  "bugs": {
+    "url": "https://github.com/delmontecillo/dsh-ferrari-theme/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
